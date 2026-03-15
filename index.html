@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Laiseca | Gameplay Developer Portfolio</title>
+    <style>
+        /* Estilos Rápidos y Limpios */
+        :root {
+            --bg: #121212;
+            --card-bg: #1e1e1e;
+            --text: #e0e0e0;
+            --accent: #00adb5;
+            /* Un azul cian tecnológico */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(180deg, #1a1a1a 0%, #121212 100%);
+        }
+
+        header h1 {
+            color: var(--accent);
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        /* Galería de Proyectos */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            border: 1px solid #333;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #000;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            border-top: 1px solid #333;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Juan David Laiseca M</h1>
+        <p>Junior Gameplay Developer | Unity & C# | Software Enginier</p>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>Sobre mí</h2>
+            <p>
+                ¡Hola! Soy un desarrollador apasionado por crear mecánicas de juego fluidas y experiencias interactivas.
+                Mi stack principal incluye <strong>C#, Unity y Git</strong>. Actualmente me enfoco en
+                optimización de código y sistemas de combate.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Proyectos Destacados</h2>
+            <div class="grid">
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200" alt="Captura del Juego 1">
+                    <div class="card-content">
+                        <h3>Nombre del Juego 1</h3>
+                        <p>Un breve resumen de qué trata, el motor usado y tu rol (ej. IA de enemigos).</p>
+                        <a href="#" class="btn">Ver Repositorio</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200" alt="Captura del Juego 2">
+                    <div class="card-content">
+                        <h3>Nombre del Juego 2</h3>
+                        <p>Explicación de un sistema técnico que implementaste, como un inventario o físicas.</p>
+                        <a href="#" class="btn">Ver Repositorio</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <h2>Contacto</h2>
+        <p>Email: <a href="mailto:juan.laiseca98@gmail.com">juan.laiseca98@gmail.com</a></p>
+        <p><a href="https://linkedin.com/in/juan-david-laiseca/">LinkedIn</a> | <a
+                href="https://github.com/JuanDavidL">GitHub</a></p>
+    </footer>
+
+</body>
+
+</html>
