@@ -33,7 +33,13 @@
         header {
             text-align: center;
             padding: 16rem 1rem;
-            background: linear-gradient(to bottom, rgba(15, 23, 42, 0), var(--bg));
+            background: linear-gradient(to bottom,
+                    rgba(15, 23, 42, 0.7),
+                    var(--bg)),
+                url('background-header.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         header h1 {
@@ -59,9 +65,19 @@
 
         h2 {
             font-size: 2rem;
+            padding-left: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .container h2 {
+            font-size: 2rem;
             border-left: 4px solid var(--accent);
             padding-left: 1rem;
             margin-bottom: 2rem;
+        }
+
+        #about {
+            padding-bottom: 1rem;
         }
 
         /* Habilidades */
@@ -194,13 +210,15 @@
 <body>
 
     <header>
-        <h1>Juan David Laiseca M</h1>
-        <p>Software Engineer | Gameplay Developer | Unity</p>
-        <div style="margin-top: 2rem;">
-            <a href="CV_Unity_JuanLaiseca.pdf" target="_blank" class="btn btn-primary"
-                style="display: inline-block; width: auto; padding: 0.8rem 2rem; border-radius: 50px; box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);">
-                Descargar CV (PDF)
-            </a>
+        <div class="container">
+            <h1>Juan David Laiseca M</h1>
+            <p>Software Engineer | Gameplay Developer | Unity</p>
+            <div style="margin-top: 2rem;">
+                <a href="CV_Unity_JuanLaiseca.pdf" target="_blank" class="btn btn-primary"
+                    style="display: inline-block; width: auto; padding: 0.8rem 2rem; border-radius: 50px; box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);">
+                    Descargar CV (PDF)
+                </a>
+            </div>
         </div>
     </header>
 
