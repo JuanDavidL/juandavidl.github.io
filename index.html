@@ -31,6 +31,83 @@
             line-height: 1.6;
         }
 
+        /* Estilos de la Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.8);
+            /* Fondo semi-transparente */
+            backdrop-filter: blur(12px);
+            /* Efecto cristal esmerilado */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.7rem 2rem;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-logo span {
+            color: var(--accent);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            margin: 0;
+        }
+
+        .nav-menu a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent);
+        }
+
+        /* Ajuste para que el scroll sea suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Evitar que el contenido se esconda bajo la navbar al saltar */
+        section {
+            scroll-margin-top: 80px;
+        }
+
+        /* Responsivo para móviles */
+        @media (max-width: 600px) {
+            .nav-menu {
+                gap: 0.8rem;
+            }
+
+            .nav-menu a {
+                font-size: 0.8rem;
+            }
+
+            .nav-logo {
+                font-size: 1.2rem;
+            }
+        }
+
         header {
             text-align: center;
             padding: 16rem 1rem;
@@ -48,6 +125,7 @@
             margin: 0;
             background: linear-gradient(to right, #38bdf8, #818cf8);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -1px;
         }
@@ -210,6 +288,18 @@
 
 <body>
 
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">JL<span>.dev</span></a>
+            <ul class="nav-menu">
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header>
         <div class="container">
             <h1>Juan David Laiseca M</h1>
@@ -227,21 +317,18 @@
         <section id="about">
             <h2>Sobre mí</h2>
             <p>
-                Soy <strong>Software Engineer</strong> con una sólida base en desarrollo Frontend (React/Angular),
-                lo que me ha brindado una visión estructurada y profesional al transicionar hacia el
-                <strong>Desarrollo de Videojuegos</strong>. Mi pasión reside en la creación de mecánicas
-                fluidas y sistemas escalables en <strong>Unity</strong>.
+                Soy <strong>Gameplay Developer</strong> especializado en la creación de mecánicas interactivas y
+                sistemas escalables con <strong>Unity y C#</strong>. Mi enfoque principal es el desarrollo de sistemas
+                de juego modulares, utilizando herramientas como <strong>ScriptableObjects</strong> para optimizar el
+                flujo de trabajo y
+                la flexibilidad del diseño.
             </p>
             <p>
-                Me especializo en el uso de <strong>C#</strong>, aplicando patrones de diseño y herramientas
-                como <strong>ScriptableObjects</strong> para crear sistemas de gameplay modulares. Además de
-                programar, tengo experiencia coordinando flujos de trabajo en <strong>Git</strong>,
-                asegurando integraciones limpias en proyectos colaborativos.
-            </p>
-            <p>
-                <!-- <strong>Mi Stack:</strong> Unity, C#, JavaScript/TypeScript, Git, Blender (Básico). -->
-                <!-- <a href="CV_Unity_JuanLaiseca.pdf" target="_blank" class="btn btn-primary"
-                    style="margin-top: 1rem; max-width: 200px;">Descargar CV (PDF)</a> -->
+                Cuento con una formación sólida como <strong>Ingeniero de Software</strong>, lo que me permite aplicar
+                principios de Clean Code, patrones de diseño y una gestión profesional de versiones con
+                <strong>Git</strong> en cada
+                proyecto. Mi experiencia previa en el ecosistema Frontend (React/Angular) me ha otorgado una mentalidad
+                orientada a la eficiencia del código y a la experiencia del usuario (UX).
             </p>
         </section>
 
@@ -264,12 +351,51 @@
             <div class="grid">
 
                 <div class="card">
+                    <img src="https://img.itch.zone/aW1nLzI2NDAxMzExLnBuZw==/315x250%23c/P2hs8N.png"
+                        alt="Gameplay de juedo de GameJam ">
+                    <div class="card-content">
+                        <h3>Baiquimu (2026)</h3>
+                        <p>Juego con estética <strong>2.5D</strong> diseñado para GameJam LAGS-2026, diseñé e integré el
+                            <strong>sistema de navegación de interfaz (UI)</strong>, incluyendo menús dinámicos,
+                            estados de pausa y transiciones de flujo de juego. Además, desarrollé un
+                            <strong>sistema de inventario modular</strong> basado en ScriptableObjects,
+                            creando una arquitectura escalable preparada para la gestión de ítems
+                            y datos, demostrando un enfoque en código reutilizable y desacoplado.
+                        </p>
+                        <div class="btn-group">
+                            <a href="https://andreagranados.itch.io/baiquimu" class="btn btn-primary">Jugar en
+                                Itch.io</a>
+                            <a href="https://github.com/JuanDavidL/LAGS-2026" class="btn btn-secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://img.itch.zone/aW1nLzI2MzU3OTg1LnBuZw==/315x250%23c/aFJQS7.png"
+                        alt="Gameplay de juedo de GameJam ">
+                    <div class="card-content">
+                        <h3>HAPPY CIRCUS (2026)</h3>
+                        <p>Un <strong>Infinite Runner Shooter</strong> desarrollado en Unity donde optimicé el
+                            rendimiento mediante un sistema de <strong>Object Pooling</strong> para la gestión dinámica
+                            de enemigos y objetos. Implementé la lógica de enemigos usando <strong>Máquinas de
+                                Estados Finitos</strong> y coordiné el flujo de trabajo en <strong>GitHub</strong>,
+                            gestionando ramas y resolviendo conflictos para asegurar la integridad del proyecto grupal.
+                        </p>
+                        <div class="btn-group">
+                            <a href="https://andreagranados.itch.io/happy-circus" class="btn btn-primary">Jugar en
+                                Itch.io</a>
+                            <a href="https://github.com/JuanDavidL/Happy-Circus" class="btn btn-secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
                     <img src="https://img.itch.zone/aW1nLzI2MDczOTI2LnBuZw==/315x250%23c/qAgfZ0.png"
                         alt="Gameplay de juedo de GameJam ">
                     <div class="card-content">
                         <h3>Skelly Escape (2026)</h3>
                         <p>Un juego de aventura y sigilo desarrollado en <strong>Unity</strong>.
-                            Desarrollado por un grupo de compañeros para una GameJam. Implementé un
+                            Creado por un grupo de compañeros para una GameJam. Implementé un
                             sistema de <strong>Power-ups desacoplado</strong> mediante el uso de
                             <strong>ScriptableObjects</strong>. Esto permitió crear nuevas
                             habilidades de forma modular sin modificar el código base.
@@ -306,7 +432,7 @@
         </section>
     </div>
 
-    <footer>
+    <footer id="contact">
         <h2>Contacto</h2>
         <p>Email: <a href="mailto:juan.laiseca98@gmail.com">juan.laiseca98@gmail.com</a></p>
         <p><a href="https://linkedin.com/in/juan-david-laiseca/">LinkedIn</a> | <a
